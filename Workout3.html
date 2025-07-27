@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input Validation</title>
+ <link rel="stylesheet"href="main.css">
+</head>
+<body>
+    <!-- TODO: add header with menu here -->
+<main>
+  <h2>Please login to view a message</h2>
+    <div id="divmessage"></div>
+    <from method="post" onsubmit="return validateForm();">
+ <label for="txtFirstName">First Name</label>
+ <input type="text" id="txtFristName" name="txtFirstName"
+  <br>  
+ <label for="txtLastName">Last Name</label>
+<input type="text " id="txtLastName" name="txtLastName">
+ <br>
+<label for="txtZip">Zip Code</label>
+<input type="text"id="txtZip" name="txtZip">
+<br>
+ <input type="submit" value="Submit Inputs">
+</from>
+</main>
+
+<!--TODO move this JavaScript code to a separate .js file before submitting the assigment  -->
+<script>
+// create a function to validate the form inputs
+ function validateForm(){
+    
+ }
+// create a shortcut/nickname for the first name that user entered
+ let firstName = document.getElementById=("txtfirstName").value;
+
+
+
+
+
+
+
+console.log("firstName =" + firstName);
+let lastName = document.getElementById("txtLastName").value;
+let zipCode = document.getElementById("txtZip").value;
+console.log("lastName =" + lastName);
+console.log("zipCode =" + zipCode);
+
+// create a new variable to hold both first and last name
+ let fullName = firstName + " " + lastName;
+
+console.log('fullName ='+ fullName);
+
+// create a shortcut to the message area(div) in the HTML
+let divMessage = document.getElementById("divMessage");
+
+// I am going to create an error message if the full name has either 1 character (") or more than 20
+// for the assignment, change 10 to 20
+if (fullName.length == 1 || fullName.length > 20){}
+// the user gets notified of the error but dose not get the secret message
+divMessage.innerHTML = "Invalid name entered. Please try again.";
+else if(zipCode.length !== 5){
+// if the zio code is not exactly 5 digits long give the user an error message
+else if(zipCode).Length
+// this will prevent the form from trying to submit to sever side code that we don't have in this class
+ return false;
+}
+// if we get to this else statement, it means all of the inputs validate successfully successfully give the user a secret Message
+
+// the inputs validated successfully , so show the user a message
+ divMessage.innerHTML =" Congratulations" + fullName +" The secret word is Volleyball":
+</script>
+</body> 
+</html>

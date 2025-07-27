@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imput Example</title>
+<link rel="stylesheet" href="main.css">
+</head>
+
+<!-- TODO move to an external .js file when complete -->
+<script>
+    //function to validate our form inputs
+ function validateform(event) {
+    
+event.preventDefault();
+    // get the user's name so we can validate it
+ let fullname = document.getElementById("txtfullname").value;
+let favcolor = document.getElementById("txtcolor").value;
+ 
+
+
+ // shortcut to the Message div
+let divmessage = document.getElementById("divMessage");
+
+console. log(" full name" + fullname);
+console.log("favColor" + favcolor);
+
+// assignment is single equal sign changing value on the left to match value on the right
+// equality uses double equal sign to compare values
+if (fullname === ""){
+divMessage.textContent =" Name cannot be blank";
+ }else if (favcolor=== ""){
+divMessage.textContent = "Favorite color cannot be blank";
+ }
+else{
+divMessage.textContent = "Thank you for your submission, " + fullname + "! Your favorite color is " + favcolor + ".";
+}
+ }
+</script>
+<body>
+  <header>  
+<h1>Input Example</h1>
+
+<main>
+ <!-- the post option for method is secure, if used in combination with https; the run the onsubmit function specified when the form is submitted -->
+    <form  onsubmit="validateform(event)">
+ <!-- Label- use with form inputs to explain what information is needed to the user & screen reader -->
+    <label for="txtfullname">Full Name </label>
+ <!-- standard textbox input -->
+    <input type="text" id= "txtfullname">
+ <!-- line break to move the next input to the next row 1000 better to do this with css -->
+
+ <label for="txtcolor"> Favorite Color </label>
+<!-- text input for the user's favorite color -->
+<input type="text" id="txtcolor" name="txtcolor" required>
+
+
+<input type="submit" value="submit">
+</form>
+<div id="divMessage"></div>
+</main>
+
+</body>
+</html>
