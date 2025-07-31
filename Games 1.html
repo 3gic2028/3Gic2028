@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dice Game</title>
+<!-- add in the CSS file createdn in Assigment 2.1 -->
+<link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <header>
+        <h1>Dice Game</h1>
+ <!--create a nav section to hold the Menu -->
+    <nav>
+        <!-- here is an example of inline CSS - this example changes the link color to -->
+    </nav>
+
+
+
+
+
+</header>
+
+<!-- add a button so the user can start playing our dice game -->
+<button type="button" onclick="DiceGame()">Click Me!</button>
+<p>die1:<span id="die1"></span> </p>
+<p>die2:<span id="die2"></span> </p>
+<!-- JavaScript code goes between our script tags: don't use HTML tags or CSS styles directly in JavaScript code-->
+<script>
+// single line comment
+/* multiline comment
+*/
+// this function will allow us to play our game
+function DiceGame(){
+// you can display helpful messages to the console to track what's going on in the program
+console.log("Dice Game");
+
+// set up 2 variables to hold the 2 dice rolls that my game needs to do
+let die1 = rollDie();
+ let die2 = rollDie();
+
+ console.log("die1=" + die1);
+ console.log("die2=" + die2);
+
+ document.getElementById("die1").innerHTML = die1;
+ document.getElementById("die2").innerHTML = die2;
+}
+ // function to  simulate the rolling of a 20-side die
+ function rollDie(){
+  // multiply random nuber between 0and 1by 20 so I get my random dice roll 
+ let randomNumber = Math.random()* 20;
+
+ // round the number up to the next whole Number
+ randomNumber = Math.ceil(randomNumber);
+
+// return the random number that was generated
+return randomNumber;
+}
+</script>
+
+
+
+</html>
