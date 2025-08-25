@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Practice</title>
+<link rel= "stylesheet" href="main.css">
+</head>
+<body>
+ <header>
+    <h1>Event Handling Practice</h1>
+ <link rel ="stylesheet" href="css colors.css">
+</header>   
+
+<main>
+   <h2>Button click event handling</h2> 
+ <p>Generate random numbers check if they are even or odd</p>
+<button onclick="generateRandomNumbers();">Generate</button>
+</main>
+
+<!-- TODO Move to external .js file -->
+<script>
+ // Function to generate random numbers and check if they are even or odd  function generateRandomNumbers() {
+  // Generate a random number between 1 and 100
+  function generateRandomNumbers() {
+    // Generate a random number between 1 and 100
+  let randomNumber = Math.floor(Math.random() * 100) + 1;
+    
+    // Check if the number is even or odd
+    let result = (randomNumber % 2 === 0) ? "even" : "odd";
+    
+    // Display the result in an alert
+    alert("The random number is: " + randomNumber + " and it is " + result + ".");
+  }
+</script>
+</body>
+</html>
