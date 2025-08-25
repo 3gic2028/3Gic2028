@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>title</title>
+
+<link rel ="stylesheet" href="css colors.css">
+</head>
+<body>
+ <header>
+    <h1>Palindrome Checker</h1>
+<!-- creat a new section to hold menu -->
+   <nav>
+    <a href="index.html" style="color:rgb(74, 121, 83);">Home</a>
+    <br>
+    <a href="Boards.html" style="color:rgb(255, 208, 0);">Boards</a>
+    <br>
+    <a href="Games 1.html" style="color:rgb(149, 121, 107);">Games</a>
+    <br>
+    <a href="Untitled-4 2.html" style="color:rgb(37, 85, 121);">Untitled-4 2</a>
+   <br>
+    <a href="Untitled-4.html 2.html" style="color:rgb(103, 130, 63);">Untitled-4 2</a>
+    <br>
+    <a href="Workout3.html" style="color:rgb(0, 255, 51);">Workout3</a>
+   <br>
+    <a href="Event Practice.html" style="color:rgb(134, 67, 68);">Event 2</a>
+</nav>
+</header>   
+
+<main>
+<!-- basics of setting up the form so that when the form is submitted we will check if the word is the same forwad and back -->
+<form name ="frmPalindrome" id="frmPalindrome" onsubmit=" checkpalindrome(event);">
+    <label for="wordInput">Enter a word or phrase:</label>
+    <input type="text" id="wordInput" placeholder="Enter a word or phrase" />
+    <button type="button" onclick="checkPalindrome();">Check Palindrome";</button>
+    <input type="reset" value="Reset" onclick="document.getElementById(result).value= document.getElementById('result').innerText='';">
+</form>
+</main>
+
+
+
+<!-- TODO move the JavaScript code to a seperate .js file -->
+<script>
+    // Function to handle the user input of the word
+function checkPalindrome() {
+    // Get the input value
+    let input = document.getElementById("wordInput").value;
+    
+    // Remove spaces and convert to lowercase
+    let cleanedInput = input.replace(/\s+/g, '').toLowerCase();
+    
+    // Reverse the cleaned input
+    let reversedInput = cleanedInput.split('').reverse().join('');
+    
+    // Check if the cleaned input is a palindrome
+    if (cleanedInput === reversedInput) {
+        alert(input + " is a palindrome.");
+    } else {
+        alert(input + " is not a palindrome.");
+    }
+}
+
+
+
+</script>
+
+
+
+</body>
+</html>
