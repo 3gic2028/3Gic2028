@@ -1,31 +1,36 @@
-<!-- tells the browser this is an HTML5 compatible Page -->
- <html lang="en">
-<!-- This is our required html opening tag -->
- <head>
-<!-- The Head section has info for the browser and Search Engine -->
-<!-- Do not include any content for the user in the headsection -->
- </head>
-<!-- Any character may be in the page -->
- <meta charset="UTF-8"> -->
-<!-- this is for mobile devices to show the Page Better -->
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!-- This title will appear in the browser tab make it short and descriptive -->
- <title>CSC102Index</title>
- </head
- 
- <!-- Everything we want to show the user goes in the body section -->
- </body>
-<!-- Add header text -->
-<h1>Welcom to my CSC102 Page</h1>
-<!-- This is a paragraph by default there will be spacing before and after the tag -->
-<P>
-<img id=" Photos.jpg" alt="Photos" src="Photos/_125838660_mediaitem125838659.jpg" style="max-width:400px;">
-</P>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Practice</title>
+<link rel= "stylesheet" href="main.css">
+</head>
+<body>
+ <header>
+    <h1>Event Handling Practice</h1>
+ </header>   
 
+<main>
+   <h2>Button click event handling</h2> 
+ <p>Generate random numbers check if they are even or odd</p>
+<button onclick="generateRandomNumbers();">Generate</button>
+</main>
 
-
-
+<!-- TODO Move to external .js file -->
+<script>
+ // Function to generate random numbers and check if they are even or odd  function generateRandomNumbers() {
+  // Generate a random number between 1 and 100
+  function generateRandomNumbers() {
+    // Generate a random number between 1 and 100
+  let randomNumber = Math.floor(Math.random() * 100) + 1;
+    
+    // Check if the number is even or odd
+    let result = (randomNumber % 2 === 0) ? "even" : "odd";
+    
+    // Display the result in an alert
+    alert("The random number is: " + randomNumber + " and it is " + result + ".");
+  }
+</script>
 </body>
-<!-- Make sure the closing body tag is at the bottom of the page -->
-<!-- Closing html tag should be at the end of every file -->
 </html>

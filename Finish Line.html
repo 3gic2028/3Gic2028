@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finish Line</title>
+<link rel="stylesheet" href="css colors.css">
+</head>
+<body>
+<header>
+    <h1>Finish Line</h1>
+</header>   
+
+
+<main>
+    <div id="countdown"></div>
+    <button onclick="updateCountDown()">Start Countdown</button>
+</main>
+<script>
+    // this function will count down from 10 to 1 and then display "finish Line"
+function FinishLine () {
+    // set up a timer to call the updatecountdown function every second (1000 milliseconds)
+}
+// set up the off ramp for the count down
+let count = 10
+// this function will be called every second to update the count down
+function updateCountDown() {
+// display the current count
+document.getElementById("countdown").innerHTML = count;
+
+// decrease the count by 1
+count = count - 1;
+
+
+// check if the count is 0{
+if (count > 0) {
+    // if the count is greater than 0, call the updateCountDown function again after 1 second
+    setTimeout(updateCountDown, 1000);
+} else {
+    // if the count is 0, display "Finish Line"
+    document.getElementById("countdown").innerHTML = "Finish Line";
+}
+}
+if (count === 0) {
+    // if the count is 0, display "Finish Line"
+
+
+
+}
+    
+    
+    </script>
+
+
+</main>
+</body>
+</html>
