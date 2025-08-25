@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<link rel="stylesheet" href="css colors.css">
+</head>
+<body>
+ <header>
+    <h1>Sounds</h1>
+ </header>   
+<main>
+    <!-- HTML way to add sound to your page -->
+<!--  -->
+    <audio controls>
+    <source src="C:\Users\Muchs\Downloads\818114__zagi2__pajala-sunrise.wav" type="audio/wav">
+</audio>
+
+
+<button onclick="addSound()">Add Sound</button>
+<br><br>
+<button oneclick="playsound()">Play Sound</button>
+<br><br>
+<button oneclick="pausesound()">Pause Sound</button>
+</main>
+
+
+<!-- TODO move JavaScript code to external .js file -->
+<script>
+  //function to add an audio element to the page and show the buttons to play and pause the sound  
+function addSound() {
+
+
+// shortcut to get the audio element
+let btnplay = document.getElementById("btnplay");
+let btnpause = document.getElementById("btnpause");
+// create an audio element
+let audwaves = document.createElement("audio");
+
+//give the audio element an id
+audwaves.setAttribute("id", "audwaves");
+// set the source of the audio element
+audwaves.src = "C:/Users/Muchs/Downloads/818114__zagi2__pajala-sunrise.wav";
+audwaves.type = "audio/wav";
+
+// append the audio element to the body
+document.body.appendChild(audwaves);
+
+// show the play and pause buttons
+letbntplay = document.createElement("button");
+
+//unhide btnplay
+btnplay.hidden = false
+
+}
+
+</script>
+</body>
+</html>
