@@ -1,0 +1,35 @@
+/*
+declaration Block:
+
+selector{
+ property: value;
+property2: value;
+}
+*/
+
+body{
+background-color:rgb(51, 98, 82);
+ color:azure;
+}
+
+nav{
+ height: 600px;
+ width: 200px;
+ float: left;
+ padding: 5px;
+
+}
+
+footer{
+ text-align: center;
+ margin-right: 200px;
+}
+
+#soccer1{
+ margin-right: 200px;
+ width: 400px;
+}
+
+h1{
+ text-align: center;
+}
